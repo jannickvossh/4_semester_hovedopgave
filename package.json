@@ -1,0 +1,23 @@
+{
+  "name": "4_semester_hovedopgave",
+  "version": "1.0.0",
+  "description": "Write something cool later",
+  "homepage": "https://github.com/jannickvossh/4_semester_hovedopgave#readme",
+  "bugs": {
+    "url": "https://github.com/jannickvossh/4_semester_hovedopgave/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jannickvossh/4_semester_hovedopgave.git"
+  },
+  "license": "ISC",
+  "author": "Jannick Voss Haunstrup",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
