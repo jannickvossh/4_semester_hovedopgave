@@ -6,6 +6,8 @@
     | Variables                  |
     | Normalize                  |
     | Base                       |
+    | Custom classes             |
+    | Document                   |
 */
 
 /*
@@ -46,6 +48,15 @@
     --content-width: calc(100% - 2 * var(--spacing-medium));
     --content-max-width: var(--width-desktop);
     --content-max-width-narrow: var(--width-tablet);
+
+    /* Colors */
+    --color-pertineo-red: #ff0255;
+    --color-pertineo-orange: #faaa3f;
+    --color-pertineo-yellow: #e5ee47;
+    --color-pertineo-lightblue: #0bbfe6;
+    --color-pertineo-darkblue: #00041A;
+    --color-pertineo-white: #FFFFFF;
+}
 
 /*
     ------------------------------
@@ -263,4 +274,80 @@ ol {
 
 li {
     list-style: none;
+}
+
+/*
+    ------------------------------
+    | CUSTOM CLASSES             |
+    ------------------------------
+*/
+
+.bgcolor-red {
+    background-color: var(--color-pertineo-red);
+}
+
+.bgcolor-orange {
+    background-color: var(--color-pertineo-orange);
+}
+
+.bgcolor-yellow {
+    background-color: var(--color-pertineo-yellow);
+}
+
+.bgcolor-lightblue {
+    background-color: var(--color-pertineo-lightblue);
+}
+
+.bgcolor-darkblue {
+    background-color: var(--color-pertineo-darkblue);
+    color: var(--color-pertineo-white);
+}
+
+.bgcolor-white {
+    background-color: var(--color-pertineo-white);
+}
+
+.color-red {
+    color: var(--color-pertineo-red);
+}
+
+.color-orange {
+    color: var(--color-pertineo-orange);
+}
+
+.color-yellow {
+    color: var(--color-pertineo-yellow);
+}
+
+.color-lightblue {
+    color: var(--color-pertineo-lightblue);
+}
+
+.color-darkblue {
+    color: var(--color-pertineo-darkblue);
+}
+
+.color-white {
+    color: var(--color-pertineo-white);
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+/*
+    ------------------------------
+    | DOCUMENT                   |
+    ------------------------------
+*/
+
+.section__inner {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--spacing-small) 0;
 }

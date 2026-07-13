@@ -17,11 +17,13 @@
     </header>
 
     <main>
-        <section class="section hero">
-                <h1 class="hero__heading">pertineo</h1>
-                <p class="hero__sub-heading">Lorem ipsum dolor sit amet,<br>curabitur blandit tempus porttitor.</p>
+        <section class="section hero bgcolor-darkblue">
+            <div class="section__inner">
+                <h1 class="hero__heading text-align-center"><span class="color-red">pe</span><span class="color-orange">rt</span><span class="color-yellow">in</span><span class="color-lightblue">eo</span></h1>
+                <p class="hero__sub-heading text-align-center">Lorem ipsum dolor sit amet,<br>curabitur blandit tempus porttitor.</p>
 
                 <a href="#" class="button">Try it out now!</a>
+            </div>
         </section>
     </main>
 
