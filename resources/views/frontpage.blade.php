@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
-    <header>
-        <a href="#">pertineo</a>
-        <nav>
-            <ul>
-                <li><a href="#">Sign in</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <x-header.static></x-header>
     <main>
         <section class="section hero bgcolor-darkblue">
             <div class="section__inner">
