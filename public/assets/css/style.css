@@ -8,6 +8,7 @@
     | Base                       |
     | Custom classes             |
     | Document                   |
+    | Typography                 |
 */
 
 /*
@@ -17,7 +18,12 @@
 */
 
 :root {
+    /* Font stacks */
+    --font-stack-primary: itc-avant-garde-gothic-pro, system-ui, sans-serif;
+    --font-stack-secondary: bitcount-grid-single-circle, 'Courier New', monospace;
+
     /* Font weights */
+    --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
 
@@ -32,6 +38,7 @@
     --font-size-tiny: 0.64rem;
 
     /* Line heights */
+    --line-height-short: 1.33rem;
     --line-height-normal: 1.875rem;
 
     /* Spacing */
@@ -350,4 +357,26 @@ li {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: var(--spacing-small) 0;
+}
+
+/*
+    ------------------------------
+    | TYPOGRAPHY                 |
+    ------------------------------
+*/
+
+body {
+    font-family: var(--font-stack-primary);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-short);
 }
