@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class RegisterUserRequest extends FormRequest
 {
     protected $passwordMinChar = 8;
-    protected $maxChar = 255;
+    protected int $maxChar = 255;
 
     public function authorize(): bool
     {

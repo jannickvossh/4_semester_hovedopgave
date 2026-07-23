@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
-    <x-header.static></x-header>
+    <x-header.static></x-header.static>
     <main>
         {{ $slot }}
     </main>

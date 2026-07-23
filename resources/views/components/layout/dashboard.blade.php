@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
+    <x-header.dynamic></x-header.dynamic>
+
     <main>
         {{ $slot }}
     </main>

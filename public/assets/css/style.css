@@ -352,6 +352,11 @@ li {
     ------------------------------
 */
 
+body {
+    background-color: var(--color-pertineo-darkblue);
+    color: var(--color-pertineo-white);
+}
+
 .section__inner {
     width: var(--content-width);
     max-width: var(--content-max-width);
