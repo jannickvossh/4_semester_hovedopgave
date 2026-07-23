@@ -380,3 +380,9 @@ h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-short);
 }
+
+.bit-font {
+    font-family: var(--font-stack-secondary);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-short);
+}
