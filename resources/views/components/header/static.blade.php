@@ -1,5 +1,5 @@
 <header class="header">
-    <a class="header__home-link" href="{{ route('frontpage') }}">pertineo</a>
+    <a class="header__home-link" href="{{ route('home') }}">pertineo</a>
     <nav>
         <ul>
             <li><a href="{{ route('login') }}">Log in</a></li>

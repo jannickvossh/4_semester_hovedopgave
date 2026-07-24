@@ -20,7 +20,7 @@ class SessionsController extends Controller
         ];
 
         if (Auth::attempt($attempt)) :
-            return redirect()->route('dashboard');
+            return redirect()->route('home');
         endif;
 
         return back();
@@ -30,6 +30,6 @@ class SessionsController extends Controller
     {
         Auth::logout();
 
-        return redirect()->route('frontpage');
+        return redirect()->route('home');
     }
 }

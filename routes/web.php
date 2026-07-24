@@ -3,15 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
 /*
  * Not logged in
  */
 Route::middleware(['guest'])->group(function () {
-    Route::get('/', function () {
-        return view('frontpage');
-    })->name('frontpage');
-
     Route::get('about', function () {
         return view('about');
     })->name('about');
@@ -32,8 +31,4 @@ Route::middleware(['guest'])->group(function () {
  */
 Route::middleware(['auth'])->group(function () {
     Route::delete('/logout', [SessionsController::class, 'destroy'])->name('sessions.destroy');
-
-    Route::get('dashboard', function() {
-        return view('dashboard');
-    })->name('dashboard');
 });
