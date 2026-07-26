@@ -1,5 +1,7 @@
 <x-layout.static title="Register | Pertineo">
-    <h1>Register new user</h1>
+    <h1>Sign up for a new account</h1>
+
+    <p><span class="color-lightblue">*</span> Required fields</p>
 
     <form method="POST" action="{{ route('register.store') }}" class="form">
         @csrf
@@ -13,6 +15,7 @@
                     name="firstName"
                     id="firstName"
                     placeholder="Jane"
+                    required
                 >
 
                 @error('firstName')
@@ -28,6 +31,7 @@
                     name="lastName"
                     id="lastName"
                     placeholder="Doe"
+                    required
                 >
 
                 @error('lastName')
@@ -45,6 +49,7 @@
                     name="email"
                     id="email"
                     placeholder="example@domain.com"
+                    required
                 >
 
                 @error('email')
@@ -59,6 +64,7 @@
                     type="password"
                     name="password"
                     id="password"
+                    required
                 >
 
                 @error('password')
@@ -67,9 +73,9 @@
             </div>
         </div>
 
-        <button class="button button--submit" type="submit">Register</button>
+        <button class="button button--solid" type="submit">Register</button>
     </form>
 
-    <p>Already a registered user?</p>
-    <a href="{{ route('login') }}" class="button">Log in here</a>
+    <p>Already have an account?</p>
+    <a href="{{ route('login') }}" class="button button--outline">Log in here</a>
 </x-layout.static>
