@@ -42,6 +42,9 @@
     --line-height-short: 1.33rem;
     --line-height-normal: 1.875rem;
 
+    /* Letter-spacing */
+    --letter-spacing-narrow: -6%;
+
     /* Spacing */
     --spacing-tiny: 10px;
     --spacing-small: 20px;
@@ -294,7 +297,6 @@ li {
 
 button {
     border: none;
-    border-radius: 0;
     cursor: pointer;
 }
 
@@ -403,6 +405,7 @@ h5,
 h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-short);
+    letter-spacing: var(--letter-spacing-narrow);
 }
 
 .bit-font {
@@ -424,6 +427,7 @@ h6 {
     border-radius: var(--form-element-border-radius);
     box-sizing: border-box;
     transition: var(--transition-normal);
+    letter-spacing: var(--letter-spacing-narrow);
 }
 
 .button--solid {
@@ -447,4 +451,38 @@ h6 {
 .button--outline:hover,
 .button--outline:focus {
     background-color: color-mix(in srgb, var(--color-pertineo-lightblue), transparent 80%);
+}
+
+.form__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing-medium);
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: var(--font-size-small);
+    transform: translateX(var(--spacing-small));
+}
+
+.label:has(+ :required)::after {
+    content: '*';
+    color: var(--color-pertineo-lightblue);
+}
+
+.input {
+    border: none;
+    height: var(--form-element-height);
+    border-radius: var(--form-element-border-radius);
+    background-color: var(--color-pertineo-white);
+    color: var(--color-pertineo-darkblue);
+    padding: 0 var(--spacing-small);
+}
+
+.input::placeholder {
+    color: color-mix(in srgb, var(--color-pertineo-darkblue), transparent 70%);
 }
