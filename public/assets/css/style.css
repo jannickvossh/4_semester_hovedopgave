@@ -10,6 +10,7 @@
     | Document                   |
     | Typography                 |
     | Forms and form elements    |
+    | Header and navigation      |
 */
 
 /*
@@ -569,4 +570,28 @@ p:has(+ p) {
     color: var(--color-pertineo-red);
     line-height: 1em;
     margin: 0.75em 0 0 var(--spacing-small);
+}
+
+/*
+    ------------------------------
+    | HEADER AND NAVIGATION      |
+    ------------------------------
+*/
+
+.header {
+    padding: var(--spacing-small);
+}
+
+.header__inner {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__home-link {
+    height: 60px;
+    width: auto;
+    display: flex;
 }

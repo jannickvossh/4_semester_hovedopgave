@@ -11,14 +11,6 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
  * Not logged in
  */
 Route::middleware(['guest'])->group(function () {
-    Route::get('about', function () {
-        return view('about');
-    })->name('about');
-
-    Route::get('contact', function () {
-        return view('contact');
-    })->name('contact');
-
     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
     Route::post('/register', [RegisteredUserController::class, 'store'])->name('register.store');
 
