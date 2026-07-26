@@ -10,14 +10,14 @@
 
                 <div class="form__group">
                     <div class="form__field">
-                        <label class="label" for="firstName">First name</label>
+                        <label class="label has-asterisk" for="firstName">First name</label>
                         <input
                             class="input input--text"
                             type="text"
                             name="firstName"
                             id="firstName"
                             placeholder="Jane"
-                            required
+                            autofocus
                         >
 
                         @error('firstName')
@@ -26,14 +26,13 @@
                     </div>
 
                     <div class="form__field">
-                        <label class="label" for="lastName">Last name</label>
+                        <label class="label has-asterisk" for="lastName">Last name</label>
                         <input
                             class="input input--text"
                             type="text"
                             name="lastName"
                             id="lastName"
                             placeholder="Doe"
-                            required
                         >
 
                         @error('lastName')
@@ -44,14 +43,13 @@
 
                 <div class="form__group">
                     <div class="form__field">
-                        <label class="label" for="email">E-mail</label>
+                        <label class="label has-asterisk" for="email">E-mail</label>
                         <input
                             class="input input--email"
                             type="email"
                             name="email"
                             id="email"
                             placeholder="example@domain.com"
-                            required
                         >
 
                         @error('email')
@@ -60,13 +58,12 @@
                     </div>
 
                     <div class="form__field">
-                        <label class="label" for="password">Password</label>
+                        <label class="label has-asterisk" for="password">Password</label>
                         <input
                             class="input input--password"
                             type="password"
                             name="password"
                             id="password"
-                            required
                         >
 
                         @error('password')

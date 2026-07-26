@@ -36,7 +36,7 @@
     --font-size-enormous: 2.441rem;
     --font-size-gigantic: 3.052rem;
     --font-size-small: 0.9rem;
-    --font-size-tiny: 0.64rem;
+    --font-size-tiny: 0.75rem;
 
     /* Line heights */
     --line-height-short: 1.33rem;
@@ -466,10 +466,10 @@ h6 {
 
 .label {
     font-size: var(--font-size-small);
-    transform: translateX(var(--spacing-small));
+    margin-left: var(--spacing-small);
 }
 
-.label:has(+ :required)::after {
+.has-asterisk::after {
     content: '*';
     color: var(--color-pertineo-lightblue);
 }
@@ -485,4 +485,10 @@ h6 {
 
 .input::placeholder {
     color: color-mix(in srgb, var(--color-pertineo-darkblue), transparent 70%);
+}
+
+.error {
+    font-size: var(--font-size-tiny);
+    color: var(--color-pertineo-red);
+    margin: 0.325em 0 0 var(--spacing-small);
 }
