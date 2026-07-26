@@ -481,6 +481,11 @@ h6 {
     background-color: var(--color-pertineo-white);
     color: var(--color-pertineo-darkblue);
     padding: 0 var(--spacing-small);
+    outline: none;
+}
+
+.input:focus {
+    box-shadow: inset 0 1px 6px var(--color-pertineo-darkblue);
 }
 
 .input::placeholder {
