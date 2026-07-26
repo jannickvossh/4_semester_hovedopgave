@@ -367,6 +367,46 @@ a {
     text-align: right;
 }
 
+.mt-tiny {
+    margin-top: var(--spacing-tiny);
+}
+
+.mt-small {
+    margin-top: var(--spacing-small);
+}
+
+.mt-medium {
+    margin-top: var(--spacing-medium);
+}
+
+.mt-large {
+    margin-top: var(--spacing-large);
+}
+
+.mt-huge {
+    margin-top: var(--spacing-huge);
+}
+
+.mb-tiny {
+    margin-bottom: var(--spacing-tiny);
+}
+
+.mb-small {
+    margin-bottom: var(--spacing-small);
+}
+
+.mb-medium {
+    margin-bottom: var(--spacing-medium);
+}
+
+.mb-large {
+    margin-bottom: var(--spacing-large);
+}
+
+.mb-huge {
+    margin-bottom: var(--spacing-huge);
+}
+
 /*
     ------------------------------
     | DOCUMENT                   |
@@ -383,6 +423,19 @@ body {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding: var(--spacing-small) 0;
+}
+
+.mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container--narrow {
+    max-width: 800px;
+}
+
+.container--very-narrow {
+    max-width: 400px;
 }
 
 /*
@@ -406,6 +459,15 @@ h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-short);
     letter-spacing: var(--letter-spacing-narrow);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+p:has(+ p) {
+    margin-bottom: 0.75em;
 }
 
 .bit-font {
@@ -420,6 +482,11 @@ h6 {
     ------------------------------
 */
 
+.form {
+    display: grid;
+    grid-gap: var(--spacing-small);
+}
+
 .button {
     font-weight: var(--font-weight-bold);
     padding: var(--spacing-tiny) var(--spacing-small);
@@ -428,6 +495,9 @@ h6 {
     box-sizing: border-box;
     transition: var(--transition-normal);
     letter-spacing: var(--letter-spacing-narrow);
+    display: block;
+    line-height: 1em;
+    width: fit-content;
 }
 
 .button--solid {
@@ -467,6 +537,8 @@ h6 {
 .label {
     font-size: var(--font-size-small);
     margin-left: var(--spacing-small);
+    line-height: 1em;
+    margin-bottom: 0.5em;
 }
 
 .has-asterisk::after {
@@ -495,5 +567,6 @@ h6 {
 .error {
     font-size: var(--font-size-tiny);
     color: var(--color-pertineo-red);
-    margin: 0.325em 0 0 var(--spacing-small);
+    line-height: 1em;
+    margin: 0.75em 0 0 var(--spacing-small);
 }
