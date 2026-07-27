@@ -1,7 +1,7 @@
 <x-layout.static title="Log in | Pertineo">
     <section class="section">
         <div class="section__inner">
-            <h1 class="text-align-center">Log in to your account</h1>
+            <h1 class="text-align-center mt-medium">Log in to your account</h1>
 
             <div class="container--very-narrow mx-auto mt-large">
                 <form method="POST" action="{{ route('sessions.store') }}" class="form mb-large">

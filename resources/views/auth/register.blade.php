@@ -1,7 +1,7 @@
 <x-layout.static title="Register | Pertineo">
     <section class="section">
         <div class="section__inner">
-            <h1 class="text-align-center">Sign up for a new account</h1>
+            <h1 class="text-align-center mt-medium">Sign up for a new account</h1>
 
             <div class="container--narrow mx-auto mt-large">
                 <form method="POST" action="{{ route('register.store') }}" class="form mb-large">
@@ -65,6 +65,7 @@
                                 type="password"
                                 name="password"
                                 id="password"
+                                placeholder="••••••••••••"
                             >
 
                             @error('password')
