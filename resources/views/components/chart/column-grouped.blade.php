@@ -1,30 +1,41 @@
 @props([
-    'name' => 'name',
+    'chartName' => 'chartName'
 ])
 
 <div class="chart">
-    <div id="{{ $name }}Chart"></div>
+    <div id="{{ $chartName }}Chart"></div>
 </div>
 
 <script>
-    let {{ $name . 'Options' }} = {
+    let {{ $chartName . 'Options' }} = {
         series: [
             {
-                name: 'Net Profit',
-                data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+                name: 'Group 1',
+                data: [44, 55, 57, 56, 61],
             },
             {
-                name: 'Revenue',
-                data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+                name: 'Group 2',
+                data: [76, 85, 101, 98, 87],
             },
             {
-                name: 'Free Cash Flow',
-                data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+                name: 'Group 3',
+                data: [35, 41, 36, 26, 45],
+            },
+            {
+                name: 'Group 4',
+                data: [35, 41, 36, 26, 45],
+            },
+            {
+                name: 'Group 5',
+                data: [35, 41, 36, 26, 45],
             },
         ],
         chart: {
             type: 'bar',
             height: 350,
+            toolbar: {
+                show: false
+            }
         },
         plotOptions: {
             bar: {
@@ -39,29 +50,24 @@
         },
         stroke: {
             show: true,
-            width: 2,
+            width: 3,
             colors: ['transparent'],
         },
+        colors: [
+            '#ff0255', '#faaa3f', '#e5ee47', '#0bbfe6', '#40738a'
+        ],
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun'],
         },
-        yaxis: {
-            title: {
-                text: '$ (thousands)',
-            },
+        legend: {
+            position: 'right',
+
         },
         fill: {
             opacity: 1,
-        },
-        tooltip: {
-            y: {
-                formatter: function (val) {
-                    return '$ ' + val + ' thousands'
-                },
-            },
-        },
+        }
     }
 
-    let {{ $name . 'Chart' }} = new ApexCharts(document.querySelector('#{{ $name }}Chart'), {{ $name . 'Options' }})
-    {{ $name . 'Chart' }}.render()
+    let {{ $chartName . 'Chart' }} = new ApexCharts(document.querySelector('#{{ $chartName }}Chart'), {{ $chartName . 'Options' }})
+    {{ $chartName . 'Chart' }}.render()
 </script>

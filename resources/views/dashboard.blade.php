@@ -96,7 +96,10 @@
             </header>
 
             <div class="dashboard-module__content">
-                <x-chart.column-grouped name="test"></x-chart.column-grouped>
+                <x-chart.column-grouped
+                    chartName="test"
+
+                ></x-chart.column-grouped>
             </div>
         </div>
     </div>
