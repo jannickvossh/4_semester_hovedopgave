@@ -90,13 +90,13 @@
                 </ul>
             </div>
         </div>
-        <div class="dashboard-module dashboard-module--full">
+        <div class="dashboard-module dashboard-module--full no-max-height">
             <header class="dashboard-module__header">
                 <h2 class="dashboard-module__heading">Route group visits by user types</h2>
             </header>
 
             <div class="dashboard-module__content">
-                <p>Ladida</p>
+                <x-chart.column-grouped name="test"></x-chart.column-grouped>
             </div>
         </div>
     </div>
