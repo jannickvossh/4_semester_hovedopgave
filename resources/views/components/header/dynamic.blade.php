@@ -37,7 +37,7 @@
                 </li>
             </ul>
         </nav>
-        
+
         <div class="lang-selector mt-auto">
             <p class="lang-selector__text">Language</p>
             <p class="lang-selector__lang">EN</p>

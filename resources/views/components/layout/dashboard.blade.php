@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/doy8nke.css">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
-<body>
+<body class="body--dashboard">
     <x-header.dynamic></x-header.dynamic>
 
-    <main>
+    <main class="main--dashboard">
         {{ $slot }}
     </main>
 
