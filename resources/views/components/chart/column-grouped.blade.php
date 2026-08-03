@@ -57,11 +57,38 @@
             '#ff0255', '#faaa3f', '#e5ee47', '#0bbfe6', '#40738a'
         ],
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            categories: ['February', 'March', 'April', 'May', 'June'],
+            labels: {
+                maxHeight: 100,
+                rotate: -60,
+                rotateAlways: true,
+                style: {
+                    colors: '#FFFFFF'
+                },
+                position: 'top',
+                trim: true,
+                offsetY: 5
+            }
+        },
+        yaxis: {
+            labels: {
+                style: {
+                    colors: '#FFFFFF'
+                }
+            }
         },
         legend: {
+            labels: {
+                colors: '#FFFFFF'
+            },
+            offsetX: -25,
             position: 'right',
-
+            markers: {
+                offsetX: -8,
+                size: 10,
+                strokeWidth: 0,
+                shape: 'circle'
+            }
         },
         fill: {
             opacity: 1,

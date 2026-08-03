@@ -55,35 +55,35 @@
 
             <div class="dashboard-module__content dashboard-module__content--no-padding">
                 <ul class="routes">
-                    <li class="route">
+                    <li class="route" data-route-id="654304">
                         <p class="route__timestamp">30.10.26 08:09</p>
                         <p class="route__url">/lorem-ipsum/dolor/sit-amet/part</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654303">
                         <p class="route__timestamp">30.10.26 08:05</p>
                         <p class="route__url">/egestas/porta-ridiculus</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654302">
                         <p class="route__timestamp">30.10.26 08:04</p>
                         <p class="route__url">/lorem-ipsum/dolor/sit-amet</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654301">
                         <p class="route__timestamp">30.10.26 08:01</p>
                         <p class="route__url">/bibendum/magna/tellus</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654300">
                         <p class="route__timestamp">30.10.26 07:59</p>
                         <p class="route__url">/bibendum/magna/tellus</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654299">
                         <p class="route__timestamp">30.10.26 07:59</p>
                         <p class="route__url">/egestas/porta-ridiculus</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654298">
                         <p class="route__timestamp">30.10.26 07:58</p>
                         <p class="route__url">/egestas</p>
                     </li>
-                    <li class="route">
+                    <li class="route" data-route-id="654297">
                         <p class="route__timestamp">30.10.26 07:55</p>
                         <p class="route__url">/bibendum/magna/tellus</p>
                     </li>
@@ -108,6 +108,25 @@
         @csrf
         @method('DELETE')
 
-        <button class="button" type="submit">Log out</button>
+        <button class="button button--solid" type="submit">Log out</button>
     </form>
+
+    <div class="modal-overlay"></div>
+    <div class="route-modal">
+        <header class="route-modal__header">
+            <h2 class="route-modal__heading">Route heading</h2>
+        </header>
+
+        <div class="route-modal__content">
+            <div class="route-modal__data">
+                <p class="route-modal__data-heading">Date and time</p>
+                <p class="route-modal__data-value">30.10.26 08:09</p>
+            </div>
+
+            <div class="route-modal__data">
+                <p class="route-modal__data-heading">Route URL</p>
+                <p class="route-modal__data-value">/lorem-ipsum/dolor/sit-amet/part</p>
+            </div>
+        </div>
+    </div>
 </x-layout.dashboard>
