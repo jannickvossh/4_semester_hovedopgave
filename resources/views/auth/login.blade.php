@@ -10,8 +10,8 @@
                     <div class="form__field">
                         <label class="label" for="email">E-mail</label>
                         <input
-                            class="input input--email"
-                            type="email"
+                            class="input input--text"
+                            type="text"
                             name="email"
                             id="email"
                             autofocus

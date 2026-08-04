@@ -13,7 +13,7 @@
                 <div class="key-statistics">
                     <div class="key-statistic">
                         <p class="key-statistic__type">Total app visits</p>
-                        <p class="key-statistic__value">375.399</p>
+                        <p class="key-statistic__value">{{ count($routes) }}</p>
                     </div>
 
                     <div class="key-statistic">

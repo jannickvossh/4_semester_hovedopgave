@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
         if (Auth::check()) :
             return view('dashboard', [
-                'routes'    => Route::orderBy('created_at')->get()
+                'routes'    => Route::orderBy('created_at', 'DESC')->get()
             ]);
         endif;
 
