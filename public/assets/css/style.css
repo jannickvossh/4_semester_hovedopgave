@@ -957,11 +957,93 @@ p:has(+ p) {
     width: 100vw;
     background-color: color-mix(in srgb, var(--color-pertineo-darkblue), transparent 20%);
     backdrop-filter: blur(5px);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-normal);
 }
 
-.route-modal {
+.modal-overlay.is-showing {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.modal {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.1);
+    border-radius: var(--border-radius-normal);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.is-showing {
+    opacity: 1;
+    pointer-events: initial;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-pertineo-mediumblue);
+    padding: var(--spacing-tiny) var(--spacing-small);
+}
+
+.modal__heading {
+    font-size: var(--font-size-medium);
+}
+
+.modal__close {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid var(--color-pertineo-white);
+    border-radius: 50%;
+    transition: var(--transition-normal);
+}
+
+.modal__close:hover {
+    background-color: color-mix(in srgb, var(--color-pertineo-lightblue), transparent 80%);
+}
+
+.modal__close-line {
+    position: absolute;
+    height: 3px;
+    width: 15px;
+    background-color: var(--color-pertineo-white);
+    top: 50%;
+    left: 50%;
+}
+
+.modal__close-line:first-child {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.modal__close-line:last-child {
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.modal__content {
+    padding: var(--spacing-small);
+    background-color: color-mix(in srgb, var(--color-pertineo-darkblue), #FFFFFF 10%);
+}
+
+.modal--route .modal__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing-small);
+}
+
+.modal--route .modal__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal--route .modal__data-heading {
+    font-size: var(--font-size-tiny);
+    margin-bottom: 0.25em;
 }

@@ -10,6 +10,7 @@
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="https://use.typekit.net/doy8nke.css">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <script src="{{ asset('assets/js/functions.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="body--dashboard">

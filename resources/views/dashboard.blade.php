@@ -55,7 +55,16 @@
 
             <div class="dashboard-module__content dashboard-module__content--no-padding">
                 <ul class="routes">
-                    <li class="route" data-route-id="654304">
+                    <li
+                        class="route"
+                        data-id="654304"
+                        data-timestamp="30.10.26 08:09"
+                        data-url="/lorem-ipsum/dolor/sit-amet/part"
+                        data-group="Population report"
+                        data-user-age="52"
+                        data-user-email="user@email.com"
+                        data-user-type="Management"
+                    >
                         <p class="route__timestamp">30.10.26 08:09</p>
                         <p class="route__url">/lorem-ipsum/dolor/sit-amet/part</p>
                     </li>
@@ -111,21 +120,46 @@
         <button class="button button--solid" type="submit">Log out</button>
     </form>
 
-    <div class="modal-overlay"></div>
-    <div class="route-modal">
-        <header class="route-modal__header">
-            <h2 class="route-modal__heading">Route heading</h2>
+    <div id="modalOverlay" class="modal-overlay"></div>
+    <div id="routeModal" class="modal modal--route">
+        <header class="modal__header">
+            <h2 class="modal__heading">Route 443.529</h2>
+
+            <div id="routeModalClose" class="modal__close">
+                <div class="modal__close-line"></div>
+                <div class="modal__close-line"></div>
+            </div>
         </header>
 
-        <div class="route-modal__content">
-            <div class="route-modal__data">
-                <p class="route-modal__data-heading">Date and time</p>
-                <p class="route-modal__data-value">30.10.26 08:09</p>
+        <div class="modal__content">
+            <div class="modal__data">
+                <p class="modal__data-heading">Date and time</p>
+                <p class="modal__data-value" id="routeTimestamp"></p>
             </div>
 
-            <div class="route-modal__data">
-                <p class="route-modal__data-heading">Route URL</p>
-                <p class="route-modal__data-value">/lorem-ipsum/dolor/sit-amet/part</p>
+            <div class="modal__data">
+                <p class="modal__data-heading">Route URL</p>
+                <p class="modal__data-value" id="routeUrl"></p>
+            </div>
+
+            <div class="modal__data">
+                <p class="modal__data-heading">Route group</p>
+                <p class="modal__data-value" id="routeGroup"></p>
+            </div>
+
+            <div class="modal__data">
+                <p class="modal__data-heading">User e-mail</p>
+                <p class="modal__data-value" id="routeUserEmail"></p>
+            </div>
+
+            <div class="modal__data">
+                <p class="modal__data-heading">User age</p>
+                <p class="modal__data-value" id="routeUserAge"></p>
+            </div>
+
+            <div class="modal__data">
+                <p class="modal__data-heading">User type</p>
+                <p class="modal__data-value" id="routeUserType"></p>
             </div>
         </div>
     </div>
