@@ -78,6 +78,9 @@
     /* Transitions */
     --transition-normal: all 150ms cubic-bezier(0.36, 0.09, 0.33, 1);
 
+    /* Text embellishments */
+    --outer-glow: 0 0 0.35em currentColor;
+
     /* Form elements */
     --form-element-height: 42px;
     --form-element-border-radius: calc(var(--form-element-height) / 2);
@@ -960,6 +963,7 @@ p:has(+ p) {
     color: var(--color-pertineo-lightblue);
     white-space: nowrap;
     margin-bottom: 0;
+    text-shadow: var(--outer-glow);
 }
 
 .route__url {

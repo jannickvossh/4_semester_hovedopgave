@@ -23,7 +23,9 @@ class SessionsController extends Controller
             return redirect()->route('home');
         endif;
 
-        return back();
+        return back()->withErrors([
+            'email' => 'Sorry, but we could not find a user with those credentials.'
+        ]);
     }
 
     public function destroy()
