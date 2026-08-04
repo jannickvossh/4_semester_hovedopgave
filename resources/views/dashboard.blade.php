@@ -55,47 +55,21 @@
 
             <div class="dashboard-module__content dashboard-module__content--no-padding">
                 <ul class="routes">
-                    <li
-                        class="route"
-                        data-id="654304"
-                        data-timestamp="30.10.26 08:09"
-                        data-url="/lorem-ipsum/dolor/sit-amet/part"
-                        data-group="Population report"
-                        data-user-age="52"
-                        data-user-email="user@email.com"
-                        data-user-type="Management"
-                    >
-                        <p class="route__timestamp">30.10.26 08:09</p>
-                        <p class="route__url">/lorem-ipsum/dolor/sit-amet/part</p>
-                    </li>
-                    <li class="route" data-route-id="654303">
-                        <p class="route__timestamp">30.10.26 08:05</p>
-                        <p class="route__url">/egestas/porta-ridiculus</p>
-                    </li>
-                    <li class="route" data-route-id="654302">
-                        <p class="route__timestamp">30.10.26 08:04</p>
-                        <p class="route__url">/lorem-ipsum/dolor/sit-amet</p>
-                    </li>
-                    <li class="route" data-route-id="654301">
-                        <p class="route__timestamp">30.10.26 08:01</p>
-                        <p class="route__url">/bibendum/magna/tellus</p>
-                    </li>
-                    <li class="route" data-route-id="654300">
-                        <p class="route__timestamp">30.10.26 07:59</p>
-                        <p class="route__url">/bibendum/magna/tellus</p>
-                    </li>
-                    <li class="route" data-route-id="654299">
-                        <p class="route__timestamp">30.10.26 07:59</p>
-                        <p class="route__url">/egestas/porta-ridiculus</p>
-                    </li>
-                    <li class="route" data-route-id="654298">
-                        <p class="route__timestamp">30.10.26 07:58</p>
-                        <p class="route__url">/egestas</p>
-                    </li>
-                    <li class="route" data-route-id="654297">
-                        <p class="route__timestamp">30.10.26 07:55</p>
-                        <p class="route__url">/bibendum/magna/tellus</p>
-                    </li>
+                    @foreach($routes as $route)
+                        <li
+                            class="route"
+                            data-id="{{ $route->id }}"
+                            data-timestamp="{{ $route->created_at }}"
+                            data-url="{{ $route->url }}"
+                            data-group="{{ $route->route_group != null ? $route->route_group : '(None)' }}"
+                            data-user-age="{{ $route->user_age }}"
+                            data-user-email="{{ $route->user_email }}"
+                            data-user-type="{{ $route->user_type }}"
+                        >
+                            <p class="route__timestamp">{{ $route->created_at }}</p>
+                            <p class="route__url">{{ $route->url }}</p>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -123,7 +97,7 @@
     <div id="modalOverlay" class="modal-overlay"></div>
     <div id="routeModal" class="modal modal--route">
         <header class="modal__header">
-            <h2 class="modal__heading">Route 443.529</h2>
+            <h2 class="modal__heading" id="routeModalHeading"></h2>
 
             <div id="routeModalClose" class="modal__close">
                 <div class="modal__close-line"></div>

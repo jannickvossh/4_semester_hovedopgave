@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('url');
             $table->string('route_group')->nullable();
+            $table->integer('user_age');
             $table->string('user_gender');
             $table->string('user_type');
             $table->string('user_email');

@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/population/dashboard',
             'route_group'   => null,
+            'user_age'      => 44,
             'user_gender'   => 'Male',
             'user_type'     => 'Administration',
             'user_email'    => 'trovin@example.com'
@@ -35,6 +36,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/population/ladida',
             'route_group'   => null,
+            'user_age'      => 55,
             'user_gender'   => 'Female',
             'user_type'     => 'HR',
             'user_email'    => 'marjoh@example.com'
@@ -43,6 +45,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/population/ladida',
             'route_group'   => null,
+            'user_age'      => 55,
             'user_gender'   => 'Female',
             'user_type'     => 'HR',
             'user_email'    => 'marjoh@example.com'
@@ -51,6 +54,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/leave/dashboard',
             'route_group'   => null,
+            'user_age'      => 32,
             'user_gender'   => 'Male',
             'user_type'     => 'HR',
             'user_email'    => 'nieras@example.com'
@@ -59,6 +63,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/leave/lodido',
             'route_group'   => null,
+            'user_age'      => 32,
             'user_gender'   => 'Male',
             'user_type'     => 'HR',
             'user_email'    => 'nieras@example.com'
@@ -67,6 +72,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/population/dubidu',
             'route_group'   => null,
+            'user_age'      => 44,
             'user_gender'   => 'Male',
             'user_type'     => 'Administration',
             'user_email'    => 'trovin@example.com'
@@ -75,6 +81,7 @@ class DatabaseSeeder extends Seeder
         Route::factory()->create([
             'url' => 'datareports/applications/dashboard',
             'route_group'   => null,
+            'user_age'      => 35,
             'user_gender'   => 'Female',
             'user_type'     => 'Teacher',
             'user_email'    => 'susmar@example.com'

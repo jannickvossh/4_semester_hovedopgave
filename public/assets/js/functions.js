@@ -9,12 +9,13 @@ function openModal(modal) {
 }
 
 function populateRouteModal(route) {
-    document.getElementById('routeTimestamp').innerHTML = route.dataset.timestamp;
-    document.getElementById('routeUrl').innerHTML       = route.dataset.url;
-    document.getElementById('routeGroup').innerHTML     = route.dataset.group;
-    document.getElementById('routeUserEmail').innerHTML = route.dataset.userEmail;
-    document.getElementById('routeUserAge').innerHTML   = route.dataset.userAge;
-    document.getElementById('routeUserType').innerHTML  = route.dataset.userType;
+    document.getElementById('routeTimestamp').innerHTML     = route.dataset.timestamp;
+    document.getElementById('routeUrl').innerHTML           = route.dataset.url;
+    document.getElementById('routeGroup').innerHTML         = route.dataset.group;
+    document.getElementById('routeUserEmail').innerHTML     = route.dataset.userEmail;
+    document.getElementById('routeUserAge').innerHTML       = route.dataset.userAge;
+    document.getElementById('routeUserType').innerHTML      = route.dataset.userType;
+    document.getElementById('routeModalHeading').innerHTML  = route.dataset.url;
 }
 
 function closeModal(modal) {
