@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\HomeController;
+use \App\Http\Controllers\RoutesController;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -23,4 +24,8 @@ Route::middleware(['guest'])->group(function () {
  */
 Route::middleware(['auth'])->group(function () {
     Route::delete('/logout', [SessionsController::class, 'destroy'])->name('sessions.destroy');
+
+    Route::prefix('routes')->group(function () {
+        Route::get('/', [RoutesController::class, 'index'])->name('routes.index');
+    });
 });
