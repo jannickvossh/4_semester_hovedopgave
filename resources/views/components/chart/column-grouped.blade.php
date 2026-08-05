@@ -57,7 +57,7 @@
             '#ff0255', '#faaa3f', '#e5ee47', '#0bbfe6', '#40738a'
         ],
         xaxis: {
-            categories: ['February', 'March', 'April', 'May', 'June'],
+            categories: ['Populationsrapport', 'Økonomirapport', 'Orlovsrapport'],
             labels: {
                 maxHeight: 100,
                 rotate: -60,

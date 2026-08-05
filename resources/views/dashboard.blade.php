@@ -73,6 +73,31 @@
                 </ul>
             </div>
         </div>
+
+        <div class="dashboard-module dashboard-module--half">
+            <div class="dashboard-module__header">
+                <h2 class="dashboard-module__heading">Route groups</h2>
+            </div>
+
+            <div class="dashboard-module__content">
+                <x-chart.pie
+                    chartName="routeGroups"
+                ></x-chart.pie>
+            </div>
+        </div>
+
+        <div class="dashboard-module dashboard-module--half">
+            <div class="dashboard-module__header">
+                <h2 class="dashboard-module__heading">User types</h2>
+            </div>
+
+            <div class="dashboard-module__content">
+                <x-chart.pie
+                    chartName="userTypes"
+                ></x-chart.pie>
+            </div>
+        </div>
+
         <div class="dashboard-module dashboard-module--full no-max-height">
             <header class="dashboard-module__header">
                 <h2 class="dashboard-module__heading">Route group visits by user types</h2>
@@ -80,8 +105,7 @@
 
             <div class="dashboard-module__content">
                 <x-chart.column-grouped
-                    chartName="test"
-
+                    chartName="routeGroupsByUserTypes"
                 ></x-chart.column-grouped>
             </div>
         </div>
