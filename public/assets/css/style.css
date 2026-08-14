@@ -13,6 +13,7 @@
     | Header and navigation      |
     | Dashboard                  |
     | Modals                     |
+    | Tables                     |
 */
 
 /*
@@ -481,6 +482,10 @@ a {
     margin-left: auto !important;
 }
 
+.height-100 {
+    height: 100% !important;
+}
+
 .flex {
     display: flex !important;
 }
@@ -491,6 +496,10 @@ a {
 
 .no-max-height {
     max-height: unset !important;
+}
+
+.no-padding {
+    padding: 0 !important;
 }
 
 /*
@@ -892,10 +901,6 @@ p:has(+ p) {
     height: calc(100% - 50px);
 }
 
-.dashboard-module__content--no-padding {
-    padding: 0;
-}
-
 .key-statistic {
     display: flex;
     justify-content: space-between;
@@ -992,6 +997,7 @@ p:has(+ p) {
 .modal-overlay.is-showing {
     opacity: 1;
     pointer-events: initial;
+    z-index: 2;
 }
 
 .modal {
@@ -1003,6 +1009,7 @@ p:has(+ p) {
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
+    z-index: 2;
 }
 
 .modal.is-showing {
@@ -1073,4 +1080,38 @@ p:has(+ p) {
 .modal--route .modal__data-heading {
     font-size: var(--font-size-tiny);
     margin-bottom: 0.25em;
+}
+
+/*
+    ------------------------------
+    | VARIABLES                  |
+    ------------------------------
+*/
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table .route {
+    display: table-row;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-pertineo-mediumblue);
+    z-index: 1;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-narrow);
+    font-size: var(--font-size-medium);
+}
+
+.th {
+    padding: var(--spacing-tiny) var(--spacing-small);
+    text-align: left;
+}
+
+.td {
+    padding: var(--spacing-tiny) var(--spacing-small);
 }

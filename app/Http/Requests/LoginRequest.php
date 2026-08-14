@@ -26,7 +26,8 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email'     => ['bail', 'required', 'email:rfc,dns'],
+            'email'     => ['bail', 'required'], // Remove this one, and replace with the one below
+            /* 'email'     => ['bail', 'required', 'email:rfc,dns'], */
             'password'  => ['required', 'min:' . $this->passwordMinChar]
         ];
     }

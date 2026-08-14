@@ -86,5 +86,32 @@ class DatabaseSeeder extends Seeder
             'user_type'     => 'Teacher',
             'user_email'    => 'susmar@example.com'
         ]);
+
+        Route::factory()->create([
+            'url' => 'datareports/economy/dashboard',
+            'route_group'   => null,
+            'user_age'      => 35,
+            'user_gender'   => 'Female',
+            'user_type'     => 'Teacher',
+            'user_email'    => 'susmar@example.com'
+        ]);
+
+        Route::factory()->create([
+            'url' => 'datareports/economy/dashboard',
+            'route_group'   => null,
+            'user_age'      => 40,
+            'user_gender'   => 'Male',
+            'user_type'     => 'Teacher',
+            'user_email'    => 'torsim@example.com'
+        ]);
+
+        Route::factory()->create([
+            'url' => 'datareports/economy/ludidu',
+            'route_group'   => null,
+            'user_age'      => 40,
+            'user_gender'   => 'Male',
+            'user_type'     => 'Teacher',
+            'user_email'    => 'torsim@example.com'
+        ]);
     }
 }

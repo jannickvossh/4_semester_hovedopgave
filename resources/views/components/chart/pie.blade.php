@@ -30,6 +30,26 @@
                 shape: 'circle'
             }
         },
+        dataLabels: {
+            style: {
+                fontFamily: 'bitcount-grid-single-circle'
+            },
+            dropShadow: {
+                enabled: false
+            },
+            background: {
+                enabled: true,
+                backgroundColor: '#00041a',
+                borderWidth: 0,
+                foreColor: '#0bbfe6',
+                dropShadow: {
+                    enabled: false
+                }
+            },
+            formatter: function(val) {
+                return Math.floor(val) + '%'
+            }
+        },
         responsive: [
             {
                 breakpoint: 480,

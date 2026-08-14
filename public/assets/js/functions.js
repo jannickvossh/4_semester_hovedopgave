@@ -14,6 +14,7 @@ function populateRouteModal(route) {
     document.getElementById('routeGroup').innerHTML         = route.dataset.group;
     document.getElementById('routeUserEmail').innerHTML     = route.dataset.userEmail;
     document.getElementById('routeUserAge').innerHTML       = route.dataset.userAge;
+    document.getElementById('routeUserGender').innerHTML    = route.dataset.userGender;
     document.getElementById('routeUserType').innerHTML      = route.dataset.userType;
     document.getElementById('routeModalHeading').innerHTML  = route.dataset.url;
 }
