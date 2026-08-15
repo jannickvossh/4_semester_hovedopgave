@@ -17,13 +17,13 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="{{ route('routes.index') }}" class="nav__link{{ url()->current() == '#' ? ' nav__link--current' : '' }}">
+                    <a href="{{ route('routes') }}" class="nav__link{{ route('routes') == url()->current() ? ' nav__link--current' : '' }}">
                         <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg>
                         Routes
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link{{ url()->current() == '#' ? ' nav__link--current' : '' }}">
+                    <a href="{{ route('route-groups') }}" class="nav__link{{ route('route-groups') == url()->current() ? ' nav__link--current' : '' }}">
                         <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-320h480v-400H320v400Zm0 80q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
                         Route groups
                     </a>
