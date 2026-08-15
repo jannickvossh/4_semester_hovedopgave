@@ -20,14 +20,14 @@
                             <tr
                                 class="route tr"
                                 data-id="{{ $route->id }}"
-                                data-timestamp="{{ $route->created_at }}"
+                                data-timestamp="{{ formattedTimestamp($route->created_at) }}"
                                 data-url="{{ $route->url }}"
                                 data-group="{{ $route->route_group != null ? $route->route_group : '(None)' }}"
                                 data-user-age="{{ $route->user_age }}"
                                 data-user-email="{{ $route->user_email }}"
                                 data-user-type="{{ $route->user_type }}"
                             >
-                                <td class="route__timestamp td">{{ $route->created_at }}</td>
+                                <td class="route__timestamp td">{{ formattedTimestamp($route->created_at) }}</td>
                                 <td class="route__url td">{{ $route->url }}</td>
                                 <td class="route__group td">{{ $route->route_group != null ? $route->route_group : '(None)' }}</td>
                             </tr>

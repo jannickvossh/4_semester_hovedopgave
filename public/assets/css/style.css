@@ -938,12 +938,22 @@ p:has(+ p) {
     text-align: right;
 }
 
-.route,
-.route-group {
+.route {
     display: flex;
     align-items: center;
     gap: var(--spacing-small);
     padding: var(--spacing-tiny) var(--spacing-small);
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+}
+
+.route-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-small);
+    padding: var(--spacing-small) calc(var(--spacing-small) + 25px) var(--spacing-small) var(--spacing-small);
     box-sizing: border-box;
     cursor: pointer;
     position: relative;

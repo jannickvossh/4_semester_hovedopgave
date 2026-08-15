@@ -59,7 +59,7 @@
                         <li
                             class="route"
                             data-id="{{ $route->id }}"
-                            data-timestamp="{{ $route->created_at }}"
+                            data-timestamp="{{ formattedTimestamp($route->created_at) }}"
                             data-url="{{ $route->url }}"
                             data-group="{{ $route->route_group != null ? $route->route_group : '(None)' }}"
                             data-user-age="{{ $route->user_age }}"
@@ -67,7 +67,7 @@
                             data-user-email="{{ $route->user_email }}"
                             data-user-type="{{ $route->user_type }}"
                         >
-                            <p class="route__timestamp">{{ $route->created_at }}</p>
+                            <p class="route__timestamp">{{ formattedTimestamp($route->created_at) }}</p>
                             <p class="route__url">{{ $route->url }}</p>
                         </li>
                     @endforeach

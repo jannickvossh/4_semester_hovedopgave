@@ -10,7 +10,7 @@
                     @foreach($routeGroups as $routeGroup => $routes)
                         <li class="route-group">
                             <span class="route-group__name">{{ $routeGroup }}</span>
-                            <span class="route-group__route-count">{{ count($routes) }} routes</span>
+                            <span class="route-group__route-count">{{ count($routes) }} visits</span>
                         </li>
                     @endforeach
                 </ul>
