@@ -26,3 +26,9 @@ function timeOfDayGreeting(): string
 
     return $greeting;
 }
+
+function getPercentageOf($part, $total, $decimals = 0)
+{
+    $percentage = $part / $total * 100;
+    return round($percentage, $decimals) . '%';
+}
