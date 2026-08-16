@@ -24,6 +24,7 @@
                                 data-url="{{ $route->url }}"
                                 data-group="{{ $route->route_group != null ? $route->route_group : '(None)' }}"
                                 data-user-age="{{ $route->user_age }}"
+                                data-user-gender="{{ $route->user_gender }}"
                                 data-user-email="{{ $route->user_email }}"
                                 data-user-type="{{ $route->user_type }}"
                             >
@@ -73,6 +74,11 @@
             <div class="modal__data">
                 <p class="modal__data-heading">User age</p>
                 <p class="modal__data-value" id="routeUserAge"></p>
+            </div>
+
+            <div class="modal__data">
+                <p class="modal__data-heading">User gender</p>
+                <p class="modal__data-value" id="routeUserGender"></p>
             </div>
 
             <div class="modal__data">

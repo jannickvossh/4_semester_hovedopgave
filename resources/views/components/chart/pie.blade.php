@@ -1,5 +1,7 @@
 @props([
-    'chartName' => 'chartName'
+    'chartName' => 'chartName',
+    'labels'    => '',
+    'data'      => ''
 ])
 
 <div class="chart">
@@ -8,7 +10,7 @@
 
 <script>
     let {{ $chartName . 'Options' }} = {
-        series: [42, 23, 15, 12, 8],
+        series: [{{ $data }}],
         chart: {
             type: 'pie',
         },
@@ -16,7 +18,7 @@
         stroke: {
             show: false
         },
-        labels: ['Organic Search', 'Direct', 'Social', 'Referral', 'Email'],
+        labels: '{{ $labels }}'.split(','),
         legend: {
             show: true,
             labels: {

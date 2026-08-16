@@ -13,37 +13,37 @@
                 <div class="key-statistics">
                     <div class="key-statistic">
                         <p class="key-statistic__type">Total app visits</p>
-                        <p class="key-statistic__value">{{ count($routes) }}</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['totalVisits'] }}</p>
                     </div>
 
                     <div class="key-statistic">
                         <p class="key-statistic__type">Most visited route group</p>
-                        <p class="key-statistic__value">Population report</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['commonRouteGroup']['name'] }}</p>
                     </div>
 
                     <div class="key-statistic key-statistic--sub">
                         <p class="key-statistic__type">Total visits</p>
-                        <p class="key-statistic__value">42.473</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['commonRouteGroup']['count'] }}</p>
                     </div>
 
                     <div class="key-statistic key-statistic--sub">
                         <p class="key-statistic__type">Most common user type</p>
-                        <p class="key-statistic__value">Teacher (24%)</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['commonRouteGroup']['commonUserType']['name'] . ' (' . $keyStatistics['commonRouteGroup']['commonUserType']['count'] . ' visits)' }}</p>
                     </div>
 
                     <div class="key-statistic">
                         <p class="key-statistic__type">Most common user type</p>
-                        <p class="key-statistic__value">Management</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['commonUserType']['name'] }}</p>
                     </div>
 
                     <div class="key-statistic key-statistic--sub">
                         <p class="key-statistic__type">Total visits</p>
-                        <p class="key-statistic__value">12.302</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['commonUserType']['count'] }}</p>
                     </div>
 
                     <div class="key-statistic key-statistic--sub">
-                        <p class="key-statistic__type">Most common user type</p>
-                        <p class="key-statistic__value">Leave report (5.623 visits)</p>
+                        <p class="key-statistic__type">Most common route group</p>
+                        <p class="key-statistic__value">{{ $keyStatistics['commonUserType']['commonRouteGroup']['name'] . ' (' . $keyStatistics['commonUserType']['commonRouteGroup']['count'] . ' visits)' }}</p>
                     </div>
                 </div>
             </div>
@@ -81,8 +81,16 @@
             </div>
 
             <div class="dashboard-module__content">
+                <?php
+                    $routeGroupsChartData = [];
+                    foreach ($routeGroups as $routeGroup) :
+                        $routeGroupsChartData[] = array_sum($routeGroup);
+                    endforeach;
+                ?>
                 <x-chart.pie
                     chartName="routeGroups"
+                    labels="{{ implode(',', array_keys($routeGroups)) }}"
+                    data="{{ implode(',', $routeGroupsChartData) }}"
                 ></x-chart.pie>
             </div>
         </div>
@@ -93,8 +101,16 @@
             </div>
 
             <div class="dashboard-module__content">
+                <?php
+                    $userTypesChartData = [];
+                    foreach ($userTypes as $userType) :
+                        $userTypesChartData[] = array_sum($userType);
+                    endforeach;
+                ?>
                 <x-chart.pie
                     chartName="userTypes"
+                    labels="{{ implode(',', array_keys($userTypes)) }}"
+                    data="{{ implode(',', $userTypesChartData) }}"
                 ></x-chart.pie>
             </div>
         </div>
@@ -155,11 +171,11 @@
                 <p class="modal__data-heading">User age</p>
                 <p class="modal__data-value" id="routeUserAge"></p>
             </div>
+
             <div class="modal__data">
                 <p class="modal__data-heading">User gender</p>
                 <p class="modal__data-value" id="routeUserGender"></p>
             </div>
-
 
             <div class="modal__data">
                 <p class="modal__data-heading">User type</p>
