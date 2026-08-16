@@ -1,6 +1,6 @@
 <x-layout.dashboard title="Home | Pertineo">
     <div class="flex-wrapper justify-between mt-medium mb-medium">
-        <h1>Good morning, Jannick.<br>Here is your overview for the day.</h1>
+        <h1>{{ timeOfDayGreeting() }}, Jannick.<br>Here is your overview for the day.</h1>
     </div>
 
     <div class="dashboard">
