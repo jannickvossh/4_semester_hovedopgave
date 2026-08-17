@@ -78,6 +78,6 @@ class HomeController extends Controller
             ]);
         endif;
 
-        return view('frontpage');
+        return view('auth.login');
     }
 }

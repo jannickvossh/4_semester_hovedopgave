@@ -28,7 +28,10 @@
 
                     <div class="key-statistic key-statistic--sub">
                         <p class="key-statistic__type">Most common user type</p>
-                        <p class="key-statistic__value">{{ $keyStatistics['commonRouteGroup']['commonUserType']['name'] . ' (' . $keyStatistics['commonRouteGroup']['commonUserType']['count'] . ' visits)' }}</p>
+                        <p class="key-statistic__value">
+                            {{ $keyStatistics['commonRouteGroup']['commonUserType']['name'] . ' (' .
+                               getPercentageOf($keyStatistics['commonRouteGroup']['commonUserType']['count'], $keyStatistics['commonRouteGroup']['count']) . ')' }}
+                        </p>
                     </div>
 
                     <div class="key-statistic">
@@ -43,7 +46,10 @@
 
                     <div class="key-statistic key-statistic--sub">
                         <p class="key-statistic__type">Most common route group</p>
-                        <p class="key-statistic__value">{{ $keyStatistics['commonUserType']['commonRouteGroup']['name'] . ' (' . $keyStatistics['commonUserType']['commonRouteGroup']['count'] . ' visits)' }}</p>
+                        <p class="key-statistic__value">
+                            {{ $keyStatistics['commonUserType']['commonRouteGroup']['name'] . ' (' .
+                               getPercentageOf($keyStatistics['commonUserType']['commonRouteGroup']['count'], $keyStatistics['commonUserType']['count']) . ')' }}
+                        </p>
                     </div>
                 </div>
             </div>

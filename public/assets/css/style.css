@@ -539,7 +539,6 @@ body {
 
 .main--dashboard {
     width: calc(100% - 2 * var(--spacing-medium));
-    max-width: calc(var(--content-max-width) - var(--spacing-medium) - 300px);
     margin-left: var(--spacing-medium);
 }
 
